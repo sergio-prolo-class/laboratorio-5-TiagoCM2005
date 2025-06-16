@@ -1,5 +1,6 @@
 package ifsc.poo.naves;
-import ifsc.poo.interfaces;
+import ifsc.poo.interfaces.Tripulada;
+import ifsc.poo.interfaces.Blindada;
 
 public class NaveExploradora extends NaveEspacial implements Tripulada, Blindada{
     private boolean holofote;
@@ -14,12 +15,9 @@ public class NaveExploradora extends NaveEspacial implements Tripulada, Blindada
     }
 
     @Override
-    public int acelerar(int velocidade_atual){
-        for(int i = 0; i <= velocidade_max || i <= 5; i++){
+    public String acelerar(int velocidade_atual){
+        for(int i = 0; i <= this.velocidade_max || i <= 5; i++){
             velocidade_atual += 30;
         }
     }
-
-
-
 }

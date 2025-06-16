@@ -1,14 +1,14 @@
-package ifsc.poo;
+package ifsc.poo.naves;
 
-public abstract class NaveExploradora{
+public abstract class NaveEspacial{
 
-    private final int id;
-    private static int count;
+    static private final int id;
+    protected static int count;
     static{
         count = 0;
     }
-    protected static final int velocidade_atual;
-    protected static final int velocidade_max;
+    protected int velocidade_atual;
+    protected int velocidade_max;
     protected boolean voo;
 
     public NaveEspacial(boolean voo, int velocidade_atual, int velocidade_max){
@@ -18,7 +18,7 @@ public abstract class NaveExploradora{
         this.velocidade_max = velocidade_max;
     }
 
-    public abstract int acelerar(int);
+    public abstract String acelerar(int);
     
     public abstract int frear(int);
     
